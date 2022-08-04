@@ -12,9 +12,10 @@ export class AppComponent implements OnInit {
   title = 'assesment3';
 
   public searchForm: FormControl = new FormControl('');
+  public countries!: Observable<any[]>;
 
-  public API_URL_ALL = 'https://restcountries.com/v3.1/all';
-  public wiki: any = 'https://en.wikipedia.org/api/rest_v1/page/summary/';
+  public API_URL_ALL: string = 'https://restcountries.com/v3.1/all';
+  public wiki: string = 'https://en.wikipedia.org/api/rest_v1/page/summary/';
 
   //For testing apis
   public API_URL = 'https://restcountries.com/v3.1/name/mexico';
@@ -23,14 +24,13 @@ export class AppComponent implements OnInit {
   /**
    * Observable
    */
-  public countries!: Observable<any[]>;
 
   constructor(private http: HttpClient) {
 
   }
 
   ngOnInit(): void {
-    this.countries = this.http.get<any>(this.API_URL_ALL);
+    this.countries = this.http.get<any>('https://restcountries.com/v3.1/all');
     console.log(this.countries);
 
   }
