@@ -8,13 +8,17 @@ import { AppComponent } from './app.component';
 import { SearchCountryPipe } from './pipes/search-country.pipe';
 import { HomeComponent } from './pages/home/home.component';
 import { DetailComponent } from './pages/detail/detail.component';
+import { CountryInfoComponent } from './components/country-info/country-info.component';
+import { StringifyPipe } from './pipes/stringify.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchCountryPipe,
+    StringifyPipe,
     HomeComponent,
-    DetailComponent
+    DetailComponent,
+    CountryInfoComponent
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,8 @@
 <p>home works!</p>
 
 <section>
-  <div *ngFor="let country of countries | async">
-    {{ country.name }}
-  </div>
+  <app-country-info
+    *ngFor="let country of countries | async"
+    [country]="country"
+  ></app-country-info>
 </section>

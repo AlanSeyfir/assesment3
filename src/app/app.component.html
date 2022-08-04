@@ -1,8 +1,13 @@
 <router-outlet></router-outlet>
+
 <!-- TODO Later change the common to official maybe a difference? -->
 <main>
   <h1>Flags Api</h1>
-
+  <input
+    type="text"
+    placeholder="Search your country!"
+    [formControl]="searchForm"
+  />
   <hr />
   <button class="btn">Previous page</button>
   <button class="btn">Next page</button>
@@ -13,7 +18,6 @@
       <thead>
         <tr class="table__titles">
           <th>Official Name</th>
-
           <th>Capital</th>
           <th>Region</th>
           <th>Language</th>
@@ -23,33 +27,35 @@
       </thead>
 
       <tbody id="contentTable">
-        <tr>
+        <tr
+          *ngFor="
+            let country of (countries | async)!
+              | searchCountry: searchForm.value
+          "
+        >
           <!--This is in th (below) *ngFor="let country of countries | async" -->
           <th>
             <a
               href="https://en.wikipedia.org/api/rest_v1/page/summary/Afghanistan"
             >
-              Mexico
+              {{ country.name.official }}
             </a>
           </th>
-          <th>Kabul</th>
-          <th>Asia</th>
-          <th style="word-break: break-word">Dari,Pashto,Turkmen</th>
-          <th>40218234</th>
-          <th>🇦🇫</th>
+          <th>{{ country.capital }}</th>
+          <th>{{ country.region }}</th>
+          <!-- TODO Make it a string add later stringify -->
+          <th style="word-break: break-word">
+            {{ country.languages | json }}
+          </th>
+          <th>{{ country.population }}</th>
+          <th>{{ country.flag }}</th>
         </tr>
       </tbody>
     </table>
 
     <hr />
 
-    <input
-      type="text"
-      placeholder="Search your country!"
-      [formControl]="searchForm"
-    />
-
-    <ul>
+    <!-- <ul>
       <li
         *ngFor="
           let country of (countries | async)! | searchCountry: searchForm.value
@@ -57,6 +63,24 @@
       >
         {{ country.name.official }}
       </li>
-    </ul>
+      <li *ngFor="let country of countries | async">
+        {{ country.name }}
+      </li>
+      <li *ngFor="let country of countries | async">
+        {{ country.capital }}
+      </li>
+      <li *ngFor="let country of countries | async">
+        {{ country.region }}
+      </li>
+      <li *ngFor="let country of countries | async">
+        {{ country.languages }}
+      </li>
+      <li *ngFor="let country of countries | async">
+        {{ country.population }}
+      </li>
+      <li *ngFor="let country of countries | async">
+        {{ country.flags }}
+      </li>
+    </ul> -->
   </article>
 </main>
