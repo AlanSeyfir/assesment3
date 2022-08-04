@@ -22,3 +22,15 @@ thead {
     margin-bottom: 0.4em;
   }
 }
+
+tbody {
+  border: 1px red solid;
+
+  tr {
+    border: 1px blue solid;
+    background-color: #cccccc;
+    th {
+      padding: 1em;
+    }
+  }
+}

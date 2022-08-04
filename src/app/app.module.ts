@@ -11,6 +11,8 @@ import { DetailComponent } from './pages/detail/detail.component';
 import { CountryInfoComponent } from './components/country-info/country-info.component';
 import { StringifyPipe } from './pipes/stringify.pipe';
 import { SortingCountriesPipe } from './pipes/sorting-countries.pipe';
+import { Stringify2Pipe } from './pipes/stringify2.pipe';
+import { PaginatePipe } from './pipes/paginate.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { SortingCountriesPipe } from './pipes/sorting-countries.pipe';
     HomeComponent,
     DetailComponent,
     CountryInfoComponent,
-    SortingCountriesPipe
+    SortingCountriesPipe,
+    Stringify2Pipe,
+    PaginatePipe
   ],
   imports: [
     BrowserModule,
