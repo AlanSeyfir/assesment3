@@ -22,8 +22,12 @@ interface Item {
 })
 export class SearchCountryPipe implements PipeTransform {
 
-  transform(countryArray: ICountry[], countryName: string): any[] {
+  transform(countryArr: ICountry[], countryName: string): ICountry[] {
     //I think I need to add the return here before countryArr.filter
-    return countryArray.filter((country) => (country.name.official as string).toLowerCase().includes(countryName.toLowerCase()));
+    return countryArr.filter((country) => (
+      country.name.official as string
+    ).toLowerCase()
+      .includes(countryName.toLowerCase())
+    );
   };
 }

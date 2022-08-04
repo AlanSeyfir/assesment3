@@ -1,27 +1,37 @@
-# Assesment3
+# Project Overview:
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
+The trainee must refactor the diagnostic assessment using Angular, for Angular the project must be use scss and no routing will be required, during this practice the trainee must use pipes, directives, smart and dumb components judging when it’s needed, also all the business logic should be place on services, this project should be built around RxJS, using the basics of the library for Reactive Programming
 
-## Development server
+## Standards:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+• You must use Pipes
+• You must use Directives
+• You must use Smart and Dumb Components
+• You must use services for the business logic
+• You must use Semantic HTML
+• You must use SASS (SCSS) your web application
 
-## Code scaffolding
+## Objectives:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+• Apply all the knowledge acquired about Angular Basic application components, pipes, directives and services.
 
-## Build
+### Requirements/Task(s):
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+The user can use what he thinks it’s needed when it comes to libraries and css frameworks.
+This project won’t be deployed to any hosting site.
 
-## Running unit tests
+### Record your notes/research here:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+This is where students can record their ideas and research as they gather the information needed to complete their project.
 
-## Running end-to-end tests
+### Outline the steps/plan for your project:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+After students complete any research necessary, this is where they will create a plan for their project. Consider requiring teacher approval before they continue to the creation/implementation phase of the project.
 
-## Further help
+### Summarize what you learned:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Possible student prompts: What did you learn? What worked well? What was the most challenging aspect of this project? What will you do differently next time?
+
+### Add the link to your project here:
+
+Link to access project

@@ -6,11 +6,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SearchCountryPipe } from './pipes/search-country.pipe';
+import { HomeComponent } from './pages/home/home.component';
+import { DetailComponent } from './pages/detail/detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SearchCountryPipe
+    SearchCountryPipe,
+    HomeComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,
