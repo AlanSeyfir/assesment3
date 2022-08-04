@@ -1,4 +1,5 @@
 //? I think I already do the interface and I complicating myself
+//* Update: I don't use this interface I use the search-country-pipe.ts interface
 export interface Countries {
   name: string;
   topLevelDomain: string[];

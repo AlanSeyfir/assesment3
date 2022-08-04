@@ -7,3 +7,18 @@ main {
   margin-right: 0.5em;
   padding: 0.5em;
 }
+
+article {
+  padding: 1em;
+  background-color: aquamarine;
+}
+
+thead {
+  color: white;
+  background-color: #006699;
+
+  th {
+    padding: 0.5em;
+    margin-bottom: 0.4em;
+  }
+}

@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
+import { SortingCountriesPipe } from './pipes/sorting-countries.pipe';
 import { StringifyPipe } from './pipes/stringify.pipe';
 import { ApiService } from './services/api.service';
 
@@ -13,8 +14,8 @@ import { ApiService } from './services/api.service';
 export class AppComponent implements OnInit {
   title = 'assesment3';
 
+  public sort: SortingCountriesPipe = new SortingCountriesPipe();
   public searchForm: FormControl = new FormControl('');
-
   public stringify: StringifyPipe = new StringifyPipe();
 
   //Observable

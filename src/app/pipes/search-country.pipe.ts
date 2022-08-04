@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
-interface ICountry {
+export interface ICountry {
   name: {
     official: string;
   };

@@ -10,6 +10,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { DetailComponent } from './pages/detail/detail.component';
 import { CountryInfoComponent } from './components/country-info/country-info.component';
 import { StringifyPipe } from './pipes/stringify.pipe';
+import { SortingCountriesPipe } from './pipes/sorting-countries.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { StringifyPipe } from './pipes/stringify.pipe';
     StringifyPipe,
     HomeComponent,
     DetailComponent,
-    CountryInfoComponent
+    CountryInfoComponent,
+    SortingCountriesPipe
   ],
   imports: [
     BrowserModule,
