@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
+import { Countries } from './countries.model';
 import { SortingCountriesPipe } from './pipes/sorting-countries.pipe';
 import { StringifyPipe } from './pipes/stringify.pipe';
 import { ApiService } from './services/api.service';
@@ -35,7 +36,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     //TODO This is for template (delete later)
-    this.countries = this.http.get<any>(this.API_URL_ALL);
+    this.countries = this.http.get<Countries[]>(this.API_URL_ALL);
 
     //TODO Service the api, need to add in the template
     // this.api.getCountries().subscribe((data) => {
